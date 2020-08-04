@@ -1,0 +1,12 @@
+nav .dropdown:hover > .dropdown-menu{
+    display:block; 
+    margin:0;
+}
+
+nav ul li{ 
+    margin: 0 30px;
+}
+
+.hide{ 
+    display: none;
+}

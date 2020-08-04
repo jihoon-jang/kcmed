@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/source/css/side.css">
+
+    <script>
+        $(window).ready(function () {
+            let headLen = $('.navbar-nav')[0].children.length;
+            let over;
+            let under;
+            let underLen = $('.navbar-nav')[0].children[0].children[1].children.length;
+            let myMenu = $('#menu')[0].innerText;
+            let x, y;
+
+            for (let i = 0; i < headLen; i++) {
+                over = "<li class=\"list-group-item o dropdown-toggle list-group-item-primary list-group-item-info\">";
+                over += $(".navbar-nav")[0].children[i].innerText;
+                over += "</li><ul class=\"u\"></ul>";
+                $('.list-group').append(over);
+                underLen = $('.navbar-nav')[0].children[i].children[1].children.length;
+                for (let j = 0; j < underLen; j++) {
+                    under = "<a href=\"";
+                    under += $('.navbar-nav')[0].children[i].children[1].children[j].href;
+                    under += "\"<li class=\"list-group-item\">";
+                    let t = $('.navbar-nav')[0].children[i].children[1].children[j].innerText;
+                    under += t;
+                    if (t === myMenu) {
+                        x = i;
+                        y = j;
+                    }
+                    under += "</li></a>";
+                    $($('.u')[i]).append(under);
+                }
+            }
+            $($('.u')[x]).addClass("see");
+
+            $('.o').click(function () {
+                let name = $(this)[0].innerText;
+                let i;
+                for (i = 0; i < headLen; i++) {
+                    if ($('.o')[i].innerText == name) 
+                        break;
+                }
+                for (let x = 0; x < headLen; x++) {
+                        $($('.u')[x]).removeClass("see");
+                }
+                $($('.u')[i]).addClass("see");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <ul class="list-group rounded"></ul>
+</body>
+
+</html>

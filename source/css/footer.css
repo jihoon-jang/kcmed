@@ -1,0 +1,30 @@
+.jumbotron {
+    font-size: 0.7rem;
+    padding:1% 0 0 0;
+    height: 130px;
+    margin: 20px 0 0 0;
+}
+
+.jumbotron  .container{
+    text-align: center;
+}
+
+.jumbotron .kor{
+    margin: 0.5% auto;
+}
+
+.jumbotron .eng{
+    margin: 0.5% auto;
+}
+
+.jumbotron .eng td{
+    font-size: 0.7rem;
+}
+
+.jumbotron .eng td:nth-child(even){
+    width: 80%;
+}
+
+.jumbotron .eng td:nth-child(odd){
+    width: 10%;
+}

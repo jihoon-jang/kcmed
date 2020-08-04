@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/source/css/header.css">
+
+  <script>
+    $(window).ready(function() {
+      let len = window.innerWidth;
+      logo(len);
+
+      $(window).resize(function() {
+        len = window.innerWidth;
+        logo(len);
+      });
+
+      function logo(len) {
+        if(len >= 992) {
+          $('#logo1').addClass("see");
+          $('#logo1').removeClass("hide");
+          $('#logo2').addClass("hide");
+          $('#logo2').removeClass("see");
+        }
+        else {
+          $('#logo2').addClass("see");
+          $('#logo2').removeClass("hide");
+          $('#logo1').addClass("hide");
+          $('#logo1').removeClass("see");
+        }
+      }
+
+    });
+    </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+
+    <a id="logo2" class="navbar-brand see" href="/index.html">
+      <img src="/source/images/logo.png" style="width:150px; height: auto;">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+ 
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+    <a id="logo1" class="navbar-brand hide" href="/index.html">
+      <img src="/source/images/logo.png" style="width:150px; height: auto;">
+    </a>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">회사소개</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/source/html/intro.html">인사말</a>
+            <a class="dropdown-item" href="/source/html/history.html">연혁</a>
+            <a class="dropdown-item" href="/source/html/vision.html">VISION</a>
+            <a class="dropdown-item" href="/source/html/org.html">조직</a>
+            <a class="dropdown-item" href="/source/html/map.html">찾아오시는 길</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            R&D센터
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/source/html/dis.html">논문</a>
+            <a class="dropdown-item" href="/source/html/patent.html">특허</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            임상실험
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/source/html/animal.html">동물실험</a>
+            <a class="dropdown-item" href="/source/html/clinical.html">임상실험</a>
+            <a class="dropdown-item" href="/source/html/fda.html">FDA</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            제품안내
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/source/html/kcmed.html">KCMED</a>
+            <a class="dropdown-item" href="/source/html/lux.html">LUX AURA</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            In Development
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/source/html/diagnosis.html">진단키트</a>
+            <a class="dropdown-item" href="/source/html/consignment.html">수탁키트</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup=" true" aria-expanded="false">
+            고객지원
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/source/html/news.html">뉴스&소식</a>
+            <a class="dropdown-item" href="/source/html/data.html">자료실</a>
+            <a class="dropdown-item" href="/source/html/site.html">관련사이트</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</body>
+
+</html>

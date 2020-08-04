@@ -1,0 +1,50 @@
+.carousel-item img{
+    max-height: initial;
+    margin-top: -30%;
+}
+
+#carouselExampleIndicators {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.col-8 img{
+    width:420px;
+    height: auto;
+}
+
+.row {
+    width:100%;
+}
+
+.row td:nth-child(1) {
+   text-align: left;
+   width:  550px;
+}
+
+.minLogo {
+    text-align: center;
+}
+
+.mL {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 1rem;
+    width: 150px;
+    height: 100px;
+}
+
+#fou {
+    margin:0 auto;
+}
+
+@media (max-width: 767.98px) {
+    .row {
+        margin:auto 0;
+    }
+
+    .mL {
+        width:100px;
+        height: 66px;
+    }
+ }
